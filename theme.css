@@ -22,7 +22,7 @@ body {
 	--callout-border-radius: var(--radius-s);
 }
 
-p + ul {
+p:not(:has(img)) + ul {
 	margin-top: calc(-1 * var(--p-spacing));
 }
 
