@@ -61,6 +61,18 @@ body {
 }
 
 /**
+ * PDF Viewer
+ */
+
+.theme-dark .pdf-viewer {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+.pdf-viewer .canvasWrapper {
+  box-shadow: none;
+}
+
+/**
  * Outline Callouts
  */
 
