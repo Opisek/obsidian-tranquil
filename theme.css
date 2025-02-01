@@ -71,7 +71,7 @@ body {
 
 .pdf-viewer .canvasWrapper,
 .pdfViewer .canvasWrapper {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 /**
@@ -126,8 +126,8 @@ h1 {
 	border-top: double 4px var(--hr-color);
 }
 h2 {
-padding-top: 0.5em;
-border-top: solid 2px var(--hr-color);
+	padding-top: 0.5em;
+	border-top: solid 2px var(--hr-color);
 }
 
 /* Prevent the line from appearing when h2 directly follows h1 */
