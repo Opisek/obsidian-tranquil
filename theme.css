@@ -64,11 +64,13 @@ body {
  * PDF Viewer
  */
 
-.theme-dark .pdf-viewer {
+.theme-dark .pdf-viewer,
+.theme-dark .pdfViewer {
   filter: invert(100%) hue-rotate(180deg);
 }
 
-.pdf-viewer .canvasWrapper {
+.pdf-viewer .canvasWrapper,
+.pdfViewer .canvasWrapper {
   box-shadow: none;
 }
 
