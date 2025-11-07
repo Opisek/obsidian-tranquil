@@ -64,12 +64,14 @@ body {
  * PDF Viewer
  */
 
-.theme-dark .pdf-viewer {
+.theme-dark .pdf-viewer,
+.theme-dark .pdfViewer {
   filter: invert(100%) hue-rotate(180deg);
 }
 
-.pdf-viewer .canvasWrapper {
-  box-shadow: none;
+.pdf-viewer .canvasWrapper,
+.pdfViewer .canvasWrapper {
+  box-shadow: none !important;
 }
 
 /**
@@ -88,15 +90,41 @@ body {
 	--scaleFactor: 0.85;
 
 	position: absolute;
+	text-wrap: balance;
 	top: calc(-1 * var(--callout-border-width));
 	transform: translateY(-50%) scale(var(--scaleFactor)) translateX(calc(-50% * (1 - var(--scaleFactor)) / var(--scaleFactor)));
-	background-color: var(--background-primary);
 	left: 0.5em;
-	padding: 0 0.5em 0 0.25em;
+	padding: 0 0.5em 0 1.4em;
+	width: calc(100% / var(--scaleFactor) - 1em);
+	display: inline;
 }
 
 .callout-title-inner {
 	margin-top: -0.05em;
+	background-color: var(--background-primary);
+	display: inline;
+	padding: .2em .3em .2em 0;
+}
+
+.callout-icon {
+	position: absolute;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	left: 0;
+}
+
+.callout-icon > * {
+	z-index: 1;
+}
+
+.callout-icon::before {
+	position: absolute;
+	background-color: var(--background-primary);
+	width: calc(100% + .5em);
+	height: 2.5em;
+	content: "";
+	left: -.2em;
 }
 
 .callout-fold {
@@ -124,8 +152,8 @@ h1 {
 	border-top: double 4px var(--hr-color);
 }
 h2 {
-padding-top: 0.5em;
-border-top: solid 2px var(--hr-color);
+	padding-top: 0.5em;
+	border-top: solid 2px var(--hr-color);
 }
 
 /* Prevent the line from appearing when h2 directly follows h1 */
