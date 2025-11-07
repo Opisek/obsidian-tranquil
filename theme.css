@@ -161,3 +161,10 @@ div.markdown-rendered > h2:first-child {
 	padding: top 0;
 	border-top: none !important;
 }
+
+/**
+ * TeX
+ */
+.MathJax {
+  color: var(--text-accent);
+}
