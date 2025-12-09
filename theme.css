@@ -46,6 +46,8 @@ body {
 	--accent-h: 210;
 	--accent-s: 80%;
 	--accent-l: 50%;
+
+  --text-highlight-bg: color-mix(in srgb, var(--text-accent) 50%, transparent);
 }
 
 .theme-dark {
