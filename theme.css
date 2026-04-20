@@ -99,6 +99,8 @@ body {
 	padding: 0 0.5em 0 1.4em;
 	width: calc(100% / var(--scaleFactor) - 1em);
 	display: inline;
+
+	anchor-scope: --anchor-callout-title;
 }
 
 .callout-title-inner {
@@ -106,6 +108,8 @@ body {
 	background-color: var(--background-primary);
 	display: inline;
 	padding: .2em .3em .2em 0;
+
+	anchor-name: --anchor-callout-title;
 }
 
 .callout-icon {
@@ -131,6 +135,11 @@ body {
 
 .callout-fold {
 	padding: 0;
+	position: absolute;
+	background-color: var(--background-primary);
+
+	position-anchor: --anchor-callout-title;
+	position-area: right;
 }
 
 /**
